@@ -1,0 +1,104 @@
+{
+  "tests": [
+    {
+      "name": "Task_01-Test01",
+      "setup": "csc Task_01/Program.cs",
+      "run": "mono Program.exe",
+      "input": "-1",
+      "output": "Incorrect input!",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Task_01-Test02",
+      "setup": "csc Task_01/Program.cs",
+      "run": "mono Program.exe",
+      "input": "f",
+      "output": "Incorrect input!",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Task_01-Test03",
+      "setup": "csc Task_01/Program.cs",
+      "run": "mono Program.exe",
+      "input": "1\r\nsomething",
+      "output": "Incorrect input!",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Task_01-Test04",
+      "setup": "csc Task_01/Program.cs",
+      "run": "mono Program.exe",
+      "input": "1\r\nsomething",
+      "output": "Incorrect input!\r\n\r\n\r\n ",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Task_01-Test05",
+      "setup": "csc Task_01/Program.cs",
+      "run": "mono Program.exe",
+      "input": "0",
+      "output": "Incorrect input!",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Task_02-Test01",
+      "setup": "csc Task_02/Program.cs",
+      "run": "mono Program.exe",
+      "input": "Rex\r\n3\r\nhunter\r\ntrue\r\nMurka\r\n8\r\n10",
+      "output": "Woof-woof!\r\nName: Rex\r\nAge: 3\r\nBreed: hunter\r\nTrained: True\r\nMoo-moo!\r\nName: Murka\r\nAge: 8\r\nMilk per day: 10",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Task_02-Test02",
+      "setup": "csc Task_02/Program.cs",
+      "run": "mono Program.exe",
+      "input": "Rex\r\n-3",
+      "output": "Incorrect input!",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Task_02-Test03",
+      "setup": "csc Task_02/Program.cs",
+      "run": "mono Program.exe",
+      "input": "\r\n",
+      "output": "Incorrect input!",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Task_02-Test04",
+      "setup": "csc Task_02/Program.cs",
+      "run": "mono Program.exe",
+      "input": "Rex\r\nsth",
+      "output": "Incorrect input!",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Task_02-Test05",
+      "setup": "csc Task_02/Program.cs",
+      "run": "mono Program.exe",
+      "input": "Rex\r\n3\r\nhunter\r\nfalse\r\nMurka\r\n8\r\n10",
+      "output": "Woof-woof!\r\nName: Rex\r\nAge: 3\r\nBreed: hunter\r\nTrained: False\r\nMoo-moo!\r\nName: Murka\r\nAge: 8\r\nMilk per day: 10",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
