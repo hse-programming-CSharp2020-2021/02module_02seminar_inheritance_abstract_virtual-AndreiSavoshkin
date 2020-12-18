@@ -47,21 +47,40 @@ namespace Task_01
         static void Main(string[] args)
         {
             int n;
-            //добавьте проверку на некорректную длинну массива
-            if (!int.TryParse(Console.ReadLine(), out n))
+            if (!int.TryParse(Console.ReadLine(), out n) || n <= 0)
             {
                 Console.WriteLine("Incorrect input!");
+                return;
             }
-    
+
             Something[] array = CreateArray(n);
             PrintArray(array);
             PrintSeparately(array);
+            Console.ReadLine();
         }
 
         static Something[] CreateArray(int n)
         {
             Something[] array = new Something[n];
-
+            for (int i = 0; i < n; i++)
+            {
+                try
+                {
+                    double input = double.Parse(Console.ReadLine());
+                    if (rnd.Next(2) % 2 == 0)
+                    {
+                        array[i] = new Ashes(input);
+                    }
+                    else
+                    {
+                        array[i] = new Lentil(input);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
             /*Заполните массив array n элементами (Lentil/Ashes) 
              *вводом чисел с клавиатуры (array[i] = new Lentil(1.06);)
              *В случае некорретного значения вывести "Incorrect input!" и продолжить ввод,
@@ -73,9 +92,14 @@ namespace Task_01
 
         static void PrintArray(Something[] array)
         {
-            /*Выведите массив на экран в одну строку, 
-             * разделяя элементы пробелами. Не забудьте переопредлить ToString().
-             * ...*/
+            foreach (var item in array)
+            {
+                if (item != null)
+                {
+                    Console.Write($"{item} ");
+                }
+            }
+            Console.WriteLine();
         }
 
         static void PrintSeparately(Something[] array)
@@ -87,6 +111,15 @@ namespace Task_01
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] is Lentil)
+                {
+                    lentils += $"{array[i]} ";
+                }
+            }
+            Console.WriteLine(lentils);
+            lentils = "";
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] is Ashes)
                 {
                     lentils += $"{array[i]} ";
                 }
@@ -120,14 +153,44 @@ namespace Task_01
             }
             set
             {
+                if (value < 0 || value > 2)
+                {
+                    throw new ArgumentException("Incorrect input!");
+                }
                 weight = value;
             }
         }
+        public override string ToString()
+        {
+            return $"{weight}";
+        }
     }
 
-    //реализуйте класс Ashes по аналогии с Lentil, используя auto-свойства!
     class Ashes : Something
     {
-        
+        private double volume;
+        public Ashes(double volume)
+        {
+            Volume = volume;
+        }
+        public double Volume
+        {
+            get
+            {
+                return volume;
+            }
+            set
+            {
+                if (value < 0 || value > 1)
+                {
+                    throw new ArgumentException("Incorrect input!");
+                }
+                volume = value;
+            }
+        }
+        public override string ToString()
+        {
+            return $"{volume}";
+        }
     }
 }
