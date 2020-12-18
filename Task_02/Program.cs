@@ -61,34 +61,39 @@ namespace Task_02
             //в catch выводите на экран "Incorrect input!"
             Dog dog;
             Cow cow;
+            try
+            {
+                string dogName = Console.ReadLine();
+                int dogAge = IntInput();
+                string breed = Console.ReadLine();
+                bool isTrained = BoolInput();
 
-            string dogName = Console.ReadLine();
-            int dogAge = IntInput();
-            string breed = Console.ReadLine();
-            bool isTrained = BoolInput();
+                string cowName = Console.ReadLine();
+                int cowAge = IntInput();
+                int milkQuantity = IntInput();
 
-            string cowName = Console.ReadLine();
-            int cowAge = IntInput();
-            int milkQuantity = IntInput();
+                dog = new Dog(dogName, dogAge, breed, isTrained);
+                dog.AnimalSound();
+                Console.WriteLine(dog.AnimalInfo());
 
-            dog = new Dog(dogName, dogAge, breed, isTrained);
-            dog.AnimalSound();
-            Console.WriteLine(dog.AnimalInfo());
-
-            cow = new Cow(cowName, cowAge, milkQuantity);
-            cow.AnimalSound();
-            Console.WriteLine(cow.AnimalInfo());
+                cow = new Cow(cowName, cowAge, milkQuantity);
+                cow.AnimalSound();
+                Console.WriteLine(cow.AnimalInfo());
+            }
+            catch
+            {
+                Console.WriteLine("Incorrect input!");
+            }
         }
 
         static bool BoolInput()
         {
-            //обработать строковый ввод пользователя ("true"/"false")
+            return bool.Parse(Console.ReadLine());
         }
 
         static int IntInput()
         {
-            //обработать ввод integer, в случае, если пользователь ввел не 
-            //int выбросить Exception (обрабатывать не нужно).
+            return int.Parse(Console.ReadLine());
         }
     }
 
@@ -105,7 +110,10 @@ namespace Task_02
             }
             set
             {
-                //выбросьте исключение, если введена пустая строка
+                if (value == string.Empty)
+                {
+                    throw new Exception();
+                }
                 name = value;
             }
         }
@@ -118,7 +126,10 @@ namespace Task_02
             }
             set
             {
-                //выбросьте исключение, если введена пустая строка
+                if (value <= 0)
+                {
+                    throw new Exception();
+                }
                 age = value;
             }
         }
@@ -135,7 +146,10 @@ namespace Task_02
 
         public Dog(string name, int age, string breed, bool isTrained)
         {
-            //реализуйте конструктор
+            Name = name;
+            Age = age;
+            Breed = breed;
+            IsTrained = isTrained;
         }
 
         public string Breed
@@ -146,7 +160,10 @@ namespace Task_02
             }
             private set
             {
-                //выбросьте исключение, если введена пустая строка
+                if (value == string.Empty)
+                {
+                    throw new ArgumentException("Incorrect input!");
+                }
                 breed = value;
             }
         }
@@ -187,7 +204,9 @@ namespace Task_02
 
         public Cow(string name, int age, int milkQuantity)
         {
-            //реализуйте конструктор
+            Name = name;
+            Age = age;
+            MilkQuantity = milkQuantity;
         }
 
         public int MilkQuantity 
