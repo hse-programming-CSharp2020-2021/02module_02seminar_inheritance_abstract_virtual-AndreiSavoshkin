@@ -5,3 +5,10 @@ C:\Users\Lenovo X1 Extreme\source\repos\02module_02seminar\Task_01\obj\Debug\Tas
 C:\Users\Lenovo X1 Extreme\source\repos\02module_02seminar\Task_01\obj\Debug\Task_01.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo X1 Extreme\source\repos\02module_02seminar\Task_01\obj\Debug\Task_01.exe
 C:\Users\Lenovo X1 Extreme\source\repos\02module_02seminar\Task_01\obj\Debug\Task_01.pdb
+D:\Программки на вижуал\Homework2module\Task_01\bin\Debug\Task_01.exe.config
+D:\Программки на вижуал\Homework2module\Task_01\bin\Debug\Task_01.exe
+D:\Программки на вижуал\Homework2module\Task_01\bin\Debug\Task_01.pdb
+D:\Программки на вижуал\Homework2module\Task_01\obj\Debug\Task_01.csprojAssemblyReference.cache
+D:\Программки на вижуал\Homework2module\Task_01\obj\Debug\Task_01.csproj.CoreCompileInputs.cache
+D:\Программки на вижуал\Homework2module\Task_01\obj\Debug\Task_01.exe
+D:\Программки на вижуал\Homework2module\Task_01\obj\Debug\Task_01.pdb
