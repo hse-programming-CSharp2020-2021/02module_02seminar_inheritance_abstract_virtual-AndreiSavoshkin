@@ -1,0 +1,7 @@
+C:\Users\Lenovo X1 Extreme\source\repos\02module_02seminar\Task_01\bin\Debug\Task_01.exe.config
+C:\Users\Lenovo X1 Extreme\source\repos\02module_02seminar\Task_01\bin\Debug\Task_01.exe
+C:\Users\Lenovo X1 Extreme\source\repos\02module_02seminar\Task_01\bin\Debug\Task_01.pdb
+C:\Users\Lenovo X1 Extreme\source\repos\02module_02seminar\Task_01\obj\Debug\Task_01.csprojAssemblyReference.cache
+C:\Users\Lenovo X1 Extreme\source\repos\02module_02seminar\Task_01\obj\Debug\Task_01.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo X1 Extreme\source\repos\02module_02seminar\Task_01\obj\Debug\Task_01.exe
+C:\Users\Lenovo X1 Extreme\source\repos\02module_02seminar\Task_01\obj\Debug\Task_01.pdb
