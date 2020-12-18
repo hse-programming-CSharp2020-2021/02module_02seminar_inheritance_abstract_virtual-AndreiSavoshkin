@@ -76,9 +76,9 @@ namespace Task_01
                         array[i] = new Lentil(input);
                     }
                 }
-                catch (Exception ex)
+                catch
                 {
-                    Console.WriteLine(ex.Message);
+                    Console.WriteLine("Incorrect input!");
                 }
             }
             /*Заполните массив array n элементами (Lentil/Ashes) 
